@@ -23,8 +23,12 @@ Det er to config-filer som må oppdateres før scriptene fungerer: `config.ini` 
 
 ### Send prisliste
 
+`send-update.py -f <filnavn>`
+
 For å sende oppdatert prisliste til butikker, bruk `send-update.py`-skriptet med `-f <filnavn>` eller `--file <filnavn>` som argument til kallet på skriptet i terminalen. Filen må være en CSV-fil, og inneholde en kolonne `productId`.
 
 ### Opprette overføringer
+
+`transfer.py -f <filnavn> --to <stock id>`
 
 For å opprette en overføring i Front fra nettbutikken, bruk `transfer.py`-skriptet med `-f <filnavn>` eller `--file <filnavn>` og `--to <stock ID>` som argumenter. Filen må være en CSV-fil, og inneholde kolonnene `gtin` (ean/gtin-koden til varen som skal flyttes) og `qty` (antall av varen som skal flyttes). stock ID må være en gyldig lager ID.
