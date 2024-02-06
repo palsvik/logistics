@@ -1,11 +1,17 @@
 #!python3
 
+import os
 import sys
 import csv
 import argparse
+import configparser
 
 sys.path.append("/Users/pederhveemalsvik/dev/logistics/src/")
 
+config = configparser.ConfigParser()
+config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
+utilPath = config.get("env", "UtilPath")
+sys.path.append(utilPath)
 from externapi.front.restapiv2 import createProductTransfer
 from externapi.front.restapiv2 import getStockList
 from externapi.front.restapiv2 import getStores
