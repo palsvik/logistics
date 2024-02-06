@@ -114,7 +114,7 @@ def getMailingDict(filename, stockIdHeader, stockNameHeader, emailHeader):
 def sendPriceUpdateMessage(recipient, products):
     columns = ["Produkt ID", "Navn", "Merke", "Ny utpris"]
     message = f"Hei! <br>"
-    message += f"Følgende styles som {recipient['name']} har på lager har fått nye utpriser<br><br>:"
+    message += f"Følgende styles som {recipient['name']} har på lager har fått nye utpriser:<br><br>"
     message += "<table><tr>"
     for column in columns:
         message += "<th style=\"text-align: center; height: 40px\">" + column + "</th>"
